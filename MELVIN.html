@@ -1,0 +1,282 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>MITSKI TOUR</title>
+    <style>
+       @font-face {
+                font-family: "redaction35";
+                src: url(Redaction35B.otf);
+            }
+
+        @font-face {
+                font-family: "redaction35i";
+                src: url(Redaction35I.otf);
+            }
+
+       body {
+            background-color: rgb(161, 145, 190);
+            font-family: "redaction35";
+            color: rgb(154, 41, 22);
+            display: flex;
+             flex-direction: column;
+             align-items: center;
+        }
+         h1 { 
+            font-size: 50px;
+            position: fixed;
+            display: block;
+            margin-top: -10px;
+            width: 100%;
+            text-align: center;
+            background-color: rgb(161, 145, 190);
+            z-index: 1;
+            padding-top: 20px;
+            padding-inline: auto;
+
+         }
+         h2 {
+            font-size: 80px;
+            font-family: "redaction35i";
+            display: block;
+            width: 100px;
+            height: 100px ;
+            margin-top: 100px;
+
+        }
+        img{
+            height: auto;
+            width: 70%;
+            margin: 0%;
+        }
+        h3{
+            font-size: 45px;
+            margin-top: 20%;
+            margin-bottom: 10px;
+        }
+
+        nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    left: 0;
+    width: 100px;
+    background-color: rgb(154, 41, 22);
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 20px;
+    }
+    nav li {
+    list-style: none;
+    }
+    nav a {
+    text-decoration: none;
+    color: rgb(161, 145, 190); 
+    }
+    nav a:hover {
+    color: aqua;
+    }
+
+.WINDOW {
+        width: min(520px, 90vw);
+        height: 900px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 260px repeat(4, 1fr);
+        gap: 10px;
+        padding: 10px;
+        background-color: rgb(14, 12, 24);
+        border-radius: 260px 260px 0 0;
+        box-shadow: 0 0 0 16px rgb(45, 38, 32),
+                    0 0 60px rgba(0, 0, 0, 0.6);
+        overflow: hidden; 
+    }
+    .ROSE {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 30px;
+        background-color: rgb(28, 40, 170);
+        animation: candlelight 4s ease-in-out infinite;
+    }
+    .ROSE h2 {
+        font-family: "redaction35i", Georgia, serif;
+        font-size: 50px;
+        color: rgb(255, 245, 225);
+        text-shadow: 0 0 12px black;
+        margin: 0;
+        position: static;
+        background: none;
+        padding: 0;
+    }
+    @keyframes candlelight {
+        0%, 100% { filter: brightness(0.75); }
+        50%      { filter: brightness(1); }
+    }
+    .PANE {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        color: rgb(255, 245, 225);
+        background-color: var(--glass);         
+        filter: brightness(0.3) saturate(0.6);
+        transition: filter 0.6s, box-shadow 0.6s;
+    }
+    .PANE span {
+        position: relative;
+        opacity: 0;
+        transition: opacity 0.6s;
+        text-shadow: 0 0 8px black;
+    }
+    .PANE .DATE     { font-size: 22px; }
+    .PANE .LOCATION { font-size: 28px; }
+    .PANE .STADIUM  { font-size: 16px; }
+    .PANE:hover,
+    .PANE:focus {
+        filter: brightness(1.1) saturate(1.2);
+        box-shadow: 0 0 35px var(--glass);
+        z-index: 1;
+    }
+    .PANE:hover span,
+    .PANE:focus span {
+        opacity: 1;
+    }
+    .cobalt   { --glass: rgb(28, 40, 170); }
+    .blood    { --glass: rgb(160, 25, 30); }
+    .lavender { --glass: rgb(161, 145, 190); }
+    .magenta  { --glass: rgb(220, 50, 110); }
+    .rust     { --glass: rgb(154, 41, 22); }
+    .powder   { --glass: rgb(120, 165, 205); }
+    .dusty    { --glass: rgb(205, 140, 140); }
+    .sepia    { --glass: rgb(170, 140, 95); }
+
+
+        .ALBUMS {
+        width: 1000px;                     
+        margin: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: -10px;                
+    }
+    .ALBUMS h2 {
+      grid-column: 1 / -1;   
+    }
+    .photo img {
+        width: 80%;          
+        height: auto;
+        display: block;  
+    }
+    
+    </style>
+    </head>
+
+    <body>
+        <nav> 
+            <li><a href="#TITLE">HOME</a></li>
+           <li><a href="#TICKET">TICKET</a></li>
+           <li><a href="#MUSIC">MUSIC</a></li>
+        </nav>
+
+
+        <h1> HASTE; SUBMISSION TOUR</h2>
+        <h2 id="TITLE">MITSKI</h1>
+        <img class="COVER" src="MITSKIHALFTONE.png" alt="album?">
+
+        
+
+    <section class="SHOWS">
+    <div class="WINDOW">
+
+        <div class="ROSE">
+            <h2 id="TICKET">TICKETS</h2>
+        </div>
+
+        <a class="PANE cobalt" href="https://www.mitski.com">
+            <span class="DATE">4 June</span>
+            <span class="LOCATION">Tokyo, JP</span>
+            <span class="STADIUM">ABC Studio</span>
+        </a>
+        <a class="PANE blood" href="https://www.mitski.com">
+            <span class="DATE">17 June</span>
+            <span class="LOCATION">Manila, PH</span>
+            <span class="STADIUM">SM Mall of Asia Arena</span>
+        </a>
+        <a class="PANE lavender" href="https://www.mitski.com">
+            <span class="DATE">20 June</span>
+            <span class="LOCATION">Bangkok, TH</span>
+            <span class="STADIUM">UOB Live</span>
+        </a>
+        <a class="PANE magenta" href="https://www.mitski.com">
+            <span class="DATE">26 June</span>
+            <span class="LOCATION">Ho Chi Minh City, VN</span>
+            <span class="STADIUM">DEF Studio</span>
+        </a>
+        <a class="PANE rust" href="https://www.mitski.com">
+            <span class="DATE">29 June</span>
+            <span class="LOCATION">Jakarta, ID</span>
+            <span class="STADIUM">Tennis Indoor Senayan</span>
+        </a>
+        <a class="PANE powder" href="https://www.mitski.com">
+            <span class="DATE">1 July</span>
+            <span class="LOCATION">Kuala Lumpur, MY</span>
+            <span class="STADIUM">Zepp KL</span>
+        </a>
+        <a class="PANE dusty" href="https://www.mitski.com">
+            <span class="DATE">3 July</span>
+            <span class="LOCATION">Singapore, SG</span>
+            <span class="STADIUM">The Star Theatre</span>
+        </a>
+        <a class="PANE sepia" href="https://www.mitski.com">
+            <span class="DATE">13 July</span>
+            <span class="LOCATION">Tokyo, JP</span>
+            <span class="STADIUM">ABC Studio</span>
+        </a>
+
+    </div>
+</section>
+
+
+        <section class="ALBUMS"> 
+        <h2 id="MUSIC">MUSIC</h2>
+
+        <div class="photo LUSH"> 
+            <a href="https://www.mitski.com/music">
+            <img src="LushAlbum.jpg" alt="LUSH"> </a> LUSH
+        </div>
+        <div class="photo album2">
+            <a href="https://www.mitski.com/music">
+            <img src="LushAlbum.jpg" alt="LUSH"> </a>
+        </div>
+        <div class="photo album3">
+            <a href="https://www.mitski.com/music">
+            <img src="LushAlbum.jpg" alt="LUSH"> </a>
+        </div>
+        <div class="photo album4">
+            <a href="https://www.mitski.com/music">
+            <img src="LushAlbum.jpg" alt="LUSH"> </a>
+        </div>
+        <div class="photo album5">
+            <a href="https://www.mitski.com/music">
+            <img src="LushAlbum.jpg" alt="LUSH"> </a>
+        </div>
+         <div class="photo album6">
+            <a href="https://www.mitski.com/music">
+            <img src="LushAlbum.jpg" alt="LUSH"> </a>
+        </div>
+
+        </section>
+        
+    
+    </body>
+    </html>
